@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Land the Trip</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      background-image: url('background.png'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    }
+
+    header {
+      background-color: rgba(51, 51, 51, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    section {
+      margin: 2em;
+      text-align: center;
+      color: #333; /* Adjust text color for better visibility on the background image */
+      flex-grow: 1; /* Allow the section to grow to fill available space */
+    }
+
+    .intro-text {
+      margin-bottom: 1em;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2em;
+      max-height: 100vh; /* Added maximum height for smaller screens */
+      overflow: hidden; /* Added overflow for scrolling on smaller screens */
+    }
+
+    .option, .option-disabled, .resource-button {
+      margin-bottom: 1em;
+      padding: 1em;
+      border: 2px solid #333;
+      border-radius: 5px;
+      width: 80%; /* Adjusted width for better responsiveness on smaller screens */
+      max-width: 400px; /* Added max-width for the buttons */
+      cursor: pointer;
+      transition: background-color 0.3s;
+      background-color: rgba(255, 255, 255, 0.96); /* Background color with opacity */
+      box-sizing: border-box; /* Include padding in the width */
+    }
+
+    .option-disabled {
+      cursor: default;
+    }
+
+
+
+    .option:hover, .resource-button:hover {
+      background-color: rgba(221, 221, 221, 0.87); /* Adjust hover background color with opacity */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><img src="logo.png"/>Land the Trip</h1>
+    <div class="intro-text">
+      <p>Support for Enduring Challenges from Psychedelic Experiences</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="options">
+      <div class="option" onclick="window.location.href='https://forms.gle/'">
+        <h3>Are you ?</h3>
+        <p>Join our -.</p>
+      </div>
+      <div class="option-disabled">
+        <h3>Are you looking for support?</h3>
+        <p>We are not yet offering services. Explore our resource page below.</p>
+      </div> 
+      <button class="resource-button" onclick="window.location.href='workinprogress.html'">Explore Resources</button>
+      <button class="resource-button" onclick="window.location.href='workinprogress.html'">About VPICS</button>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 West County Labs LLC
+</body>
+</html>
