@@ -1,0 +1,206 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+      background-color: rgba(0,0,0,0);
+    }
+
+    .md-tabs {
+      background-color: rgba(0,0,0,0);
+            font-weight: bold;
+    }
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    body {
+      background-image: url('assets/background.png'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .titlelogo {
+      width: 25%;
+      opacity: 0.7;
+    }
+
+    .wordlogo {
+      width: 80%;
+      max-width: 800px
+    }
+
+    .logocontainer {
+      text-align: center;
+      padding: 2em;
+    }
+
+section {
+  margin: 2em;
+  text-align: center;
+  color: #333; /* Adjust text color for better visibility on the background image */
+  flex-grow: 1; /* Allow the section to grow to fill available space */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  max-height: 100vh; /* Added maximum height for smaller screens */
+  overflow: hidden; /* Added overflow for scrolling on smaller screens */
+}
+
+.option, .option-disabled, .resource-button {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 80%; /* Adjusted width for better responsiveness on smaller screens */
+  max-width: 400px; /* Added max-width for the buttons */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: rgba(255, 255, 255, 0.96); /* Background color with opacity */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.option-disabled {
+  cursor: default;
+}
+
+
+
+
+.option:hover, .resource-button:hover {
+  background-color: rgba(221, 221, 221, 0.87); /* Adjust hover background color with opacity */
+}
+
+    .construction-box {
+      background-color: rgba(255, 255, 255, 0.8); /* Whitish background color with opacity */
+      padding: 1em;
+      border-radius: 10px;
+      margin-bottom: 2em;
+    }
+
+    .message {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .referbox, .referdesc {
+      margin-bottom: 1em;
+      font-size: 1em;
+      font-weight: bold;
+      width: 80%;
+      display:block;
+      align-items: center;
+      text-align: left;
+    }
+
+    .disclaimer{
+      background-color: rgba(255, 255, 255, 0.8); /* Whitish background color with opacity */
+      color: black;
+      padding: 1em;
+      border-radius: 10px;
+      margin-top: 2em;
+            font-size: .67em;
+      max-width: 800px;
+      text-align: center;
+      color: #000;
+    }
+
+  </style>
+
+  <!-- Hero for landing page -->
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="logocontainer">
+        <!-- Hero image -->
+        <div class="mdx-hero__image">
+          <img
+            src="assets/logo.png"
+            alt=""
+            class="titlelogo"
+            draggable="false"
+          >
+        </div>
+        <div class="mdx-hero__image">
+          <img
+            src="assets/wordlogo.png"
+            alt=""
+            class="wordlogo"
+            draggable="false"
+          >
+        </div>
+      </div>
+        <!-- Hero content -->
+        <div class="mdx-hero__content">
+              <div class="construction-box">
+      <div class="message">Compassionate Support for Enduring Post-Psychedelic Challenges</div>
+    </div>
+          <a
+            href="{{ page.next_page.url | url }}"
+            title="{{ page.next_page.title | e }}"
+            class="md-button md-button--primary"
+          >
+            Resources
+          </a>
+          <a
+            href="{{ 'contact/' | url }}"
+            title="Material for MkDocs Insiders"
+            class="md-button"
+          >
+            Get Support
+          </a>
+        </div>
+          <div class="options">
+      <div class="option-disabled">
+        <h3>Are you seeking individual support?</h3>
+        <p>We are not yet offering consultations yet, but please explore our resource page.</p>
+      </div>
+                    <div class="disclaimer">Land The Trip does not encourage or condone any illegal activities, including but not limited to the use of illegal substances. We do not provide mental health, clinical, or medical services and we are not a substitute for medical, psychological, or psychiatric diagnosis, treatment, or advice. If you are in a crisis or if you or any other person may be in danger or experiencing a mental health emergency, immediately call 911 or your local emergency resources. If you are considering suicide, please call 988 to connect with the National Suicide Prevention Lifeline.<br/>&copy; 2024 Land The Trip</div>
+    </div>
+
+      </div>
+
+    </div>
+
+  </section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %} 
+

@@ -1,0 +1,55 @@
+site_name: Land The Trip
+site_url: https://landthetrip.com
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Difficulties:
+    - Social Difficulties: social.md
+    - Perceptual Difficulties: perceptual.md
+    - Cognitive Difficulties: cognitive.md
+    - Emotional Difficulties: emotional.md
+    - Existential Difficulties: existential.md
+    - Self-Perception Difficulties: selfperception.md
+    - Somatic Difficulties: somatic.md
+    - Behavioral Difficulties: behavioral.md
+  - Organizations: orgs.md
+  - Research: research.md
+  - Library: library.md
+  - Contact: contact.md
+
+
+theme:
+  name: material
+  custom_dir: material/overrides
+  logo: assets/logo.png
+  features:
+    - navigation.sections
+    - navigation.tabs
+  favicon: assets/favicon.ico
+  font:
+    text: Raleway
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  homepage: https://landthetrip.com
